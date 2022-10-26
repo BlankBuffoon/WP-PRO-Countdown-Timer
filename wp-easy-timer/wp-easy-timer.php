@@ -16,6 +16,21 @@ if ( !defined('ABSPATH') ) {
 
 class wpeasytimer {
 
+    public function register() {
+        add_action( 'init', [$this,'custom_post_type'] );
+    }
+
+    public function custom_post_type() {
+        register_post_type( 'property',
+        array(
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array( 'slug' => 'properties' ),
+            'label' => 'Property',
+            'supports' => array('title', 'editor', 'thumbnail'),
+        ));
+    }
+
     static function activation() {
 
         flush_rewrite_rules();
@@ -29,6 +44,7 @@ class wpeasytimer {
 
 if ( class_exists('wpeasytimer') ) {
     $wpeasytimer = new wpeasytimer();
+    $wpeasytimer->register();
 }
 
 register_activation_hook(__FILE__, array($wpeasytimer,'activation') );
