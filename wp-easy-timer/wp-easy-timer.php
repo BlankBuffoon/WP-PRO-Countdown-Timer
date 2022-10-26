@@ -21,12 +21,12 @@ class wpeasytimer {
     }
 
     public function custom_post_type() {
-        register_post_type( 'property',
+        register_post_type( 'timer',
         array(
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array( 'slug' => 'properties' ),
-            'label' => 'Property',
+            'rewrite' => array( 'slug' => 'timer' ),
+            'label' => 'Таймеры',
             'supports' => array('title', 'editor', 'thumbnail'),
         ));
     }
