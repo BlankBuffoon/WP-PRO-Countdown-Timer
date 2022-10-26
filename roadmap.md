@@ -7,6 +7,7 @@ Timepicker
 Visual part
 - [ ] Vertical menu in PostType settings
 - [ ] Grid markup in post type settings
+- [ ] Create CSS styles
 
 Other
 - [ ] Create metaboxes for custom posttype
