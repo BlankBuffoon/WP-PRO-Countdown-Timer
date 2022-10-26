@@ -1,9 +1,9 @@
 jQuery(function() {
     jQuery( ".datepicker" ).datetimepicker({
-        dateFormat: 'dd.mm.y',
-        timeFormat: 'hh mm'
+        dateFormat	: 'dd.mm.yy',
+        timeFormat	: 'HH:mm',
+        minDate		: 0,
+        changeMonth	: true,
+        changeYear	: true,
     });
 });
-
-// dateFormat: 'dd.mm.y',
-// timeFormat: 'HH:mm'

@@ -19,9 +19,11 @@ if(!class_exists('WPETCustomPostType')) {
 
         public function enqueue_jqueryUI() {
             wp_enqueue_script( 'jquery-ui-datepicker' );
+            wp_enqueue_script( 'jquery-ui-core' );
+            wp_enqueue_script( 'jquery-ui-slider' );
             wp_enqueue_style( 'jquery-ui-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css', true);
 
-            wp_enqueue_script('jquery-ui-timepicker-addon', plugins_url('/../assets/js/admin/jquery-ui-timepicker-addon.js', __FILE__), array('jquery'), '1.0', true );
+            wp_enqueue_script('jquery-ui-timepicker-addon', plugins_url('/../assets/js/admin/jquery-ui-timepicker-addon.min.js', __FILE__), array('jquery'), '1.0', true );
             wp_enqueue_style('jquery-ui-timepicker-addon', plugins_url('/../assets/css/admin/jquery-ui-timepicker-addon.css', __FILE__) );
         }
     
@@ -90,7 +92,7 @@ if(!class_exists('WPETCustomPostType')) {
                     <div style="display: flex">
                         <p>Срок</p>
                         <div>
-                            <input type="text" class="datepicker" name="datepicker" value=""/>
+                            <input class="datepicker" name="datepicker">
                         </div>
                     </div>
                 </div>
