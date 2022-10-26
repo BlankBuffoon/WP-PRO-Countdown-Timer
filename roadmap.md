@@ -6,7 +6,12 @@ Timepicker
   
 Visual part
 - [ ] Vertical menu in PostType settings
+- [ ] Grid markup in post type settings
 
 Other
 - [ ] Create metaboxes for custom posttype
+- [ ] Create class (php, css) hierarchy
+- [ ] Think over the hierarchy of files for the layout of the post type settings page
+
+Constantly
 - [ ] Refactor
