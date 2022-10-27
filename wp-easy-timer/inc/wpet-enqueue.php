@@ -4,12 +4,12 @@ if ( !defined('ABSPATH') ) {
     die;
 }
 
-function enqueue_admin() {
+function wpet_enqueue_admin() {
     wp_enqueue_script( 'wpeasytimer_script', plugins_url('/../assets/js/admin/wpet-admin-scripts.js', __FILE__), array('jquery'), '1.0', true );
     wp_enqueue_style( 'wpeasytimer_styles', plugins_url('/../assets/css/admin/wpet-admin-styles.css', __FILE__) );
 }
 
-function enqueue_jqueryUI() {
+function wpet_enqueue_jqueryUI() {
     wp_enqueue_script( 'jquery-ui-datepicker' );
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-slider' );

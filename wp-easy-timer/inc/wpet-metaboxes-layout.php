@@ -6,30 +6,30 @@ if ( !defined('ABSPATH') ) {
 
     <div class="wpet-grig-section blockwidth">
         <label for="wpet_gl_settings_blockwidth">Ширина блока</label>
-        <input type="number" id="wpet_gl_settings_blockwidth" name="wpet_gl_settings_blockwidth" value="<?=esc_html($blockwidth)?>">
+        <input type="text" id="wpet_gl_settings_blockwidth" name="wpet_gl_settings_blockwidth" value="<?= $blockwidth ?>">
     </div>
 
     <div class="wpet-grig-section options">
         <p>Опции</p>
         <div>
             <div>
-                <input type="checkbox" id="wpet_gl_settings_options_heading" name="wpet_gl_settings_options" value="heading" checked>
+                <input type="checkbox" id="wpet_gl_settings_options_heading" name="wpet_gl_settings_options[]" value="heading" <?= in_array('heading', $options) ? 'checked="checked"' : '' ?>>
                 <label for="wpet_gl_settings_options_heading">Заголовок</label>
             </div>
             <div>
-                <input type="checkbox" id="wpet_gl_settings_options_timer" name="wpet_gl_settings_options" value="timer" checked>
+                <input type="checkbox" id="wpet_gl_settings_options_timer" name="wpet_gl_settings_options[]" value="timer" <?= in_array('timer', $options) ? 'checked="checked"' : '' ?>>
                 <label for="wpet_gl_settings_options_timer">Таймер</label>
             </div>
             <div>
-                <input type="checkbox" id="wpet_gl_settings_options_paragraph" name="wpet_gl_settings_options" value="paragraph">
+                <input type="checkbox" id="wpet_gl_settings_options_paragraph" name="wpet_gl_settings_options[]" value="paragraph" <?= in_array('paragraph', $options) ? 'checked="checked"' : '' ?>>
                 <label for="wpet_gl_settings_options_paragraph">Подзаголовок</label><br>
             </div>
             <div>
-                <input type="checkbox" id="wpet_gl_settings_options_progress_bar" name="wpet_gl_settings_options" value="progress_bar">
+                <input type="checkbox" id="wpet_gl_settings_options_progress_bar" name="wpet_gl_settings_options[]" value="progress_bar" <?= in_array('progress_bar', $options) ? 'checked="checked"' : '' ?>>
                 <label for="wpet_gl_settings_options_progress_bar">Полоса прогресса</label>
             </div>
             <div>
-                <input type="checkbox" id="wpet_gl_settings_options_button" name="wpet_gl_settings_options" value="button" checked>
+                <input type="checkbox" id="wpet_gl_settings_options_button" name="wpet_gl_settings_options[]" value="button" <?= in_array('button', $options) ? 'checked="checked"' : '' ?>>
                 <label for="wpet_gl_settings_options_button">Кнопка</label><br>
             </div>
         </div>
