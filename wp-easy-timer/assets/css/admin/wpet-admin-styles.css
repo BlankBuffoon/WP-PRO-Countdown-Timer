@@ -1,0 +1,25 @@
+.wpet_metabox_wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wpet-grig-section {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 3.5fr 4fr 2fr;
+    gap: 10px;
+}
+
+.wpet-grig-section.order ul {
+    padding: 10px;
+    border: 1px solid #bababa;
+}
+
+.wpet-grig-section.order ul li {
+    padding: 4px 8px;
+}
+
+.wpet-grig-section.order ul li:not(:last-child) {
+    margin-bottom: 4px;
+}

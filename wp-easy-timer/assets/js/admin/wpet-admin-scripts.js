@@ -6,4 +6,6 @@ jQuery(function() {
         changeMonth	: true,
         changeYear	: true,
     });
+
+    jQuery("#sortable").sortable();
 });

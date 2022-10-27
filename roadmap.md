@@ -2,9 +2,9 @@
 
 Timepicker
 - [x] Fix Timepicker Error Log
-- [ ] Create skin for date/time picker
+- [x] Create skin for date/time picker
   
-Visual part
+Main tasks
 - [ ] Vertical menu in PostType settings
 - [ ] Grid markup in post type settings
 - [ ] Create CSS styles
