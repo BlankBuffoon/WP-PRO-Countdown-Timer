@@ -1,7 +1,11 @@
 <?php
-if ( !defined('ABSPATH') ) {
-    die;
-} ?>
+    $blockwidth = get_post_meta( $post->ID, 'wpet_gl_settings_blockwidth', true );
+    $options = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
+
+    if ( !defined('ABSPATH') ) {
+        die;
+    } 
+?>
 <section class="wpet_metabox_wrapper" id="general">
 
     <div class="wpet-grig-section blockwidth">
@@ -38,11 +42,11 @@ if ( !defined('ABSPATH') ) {
     <div class="wpet-grig-section order">
         <p>Порядок</p>
         <ul id="sortable">
-            <li class="ui-state-default">Заголовок<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
-            <li class="ui-state-default">Таймер<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
-            <li class="ui-state-default">Подзаголовок<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
-            <li class="ui-state-default">Полоса прогресса<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
-            <li class="ui-state-default">Кнопка<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
+            <li value="heading" class="ui-state-default">Заголовок<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
+            <li value="timer" class="ui-state-default">Таймер<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
+            <li value="paragraph" class="ui-state-default">Подзаголовок<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
+            <li value="progress_bar" class="ui-state-default">Полоса прогресса<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
+            <li value="button" class="ui-state-default">Кнопка<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
         </ul>
     </div>
 

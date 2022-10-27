@@ -15,9 +15,11 @@ if(!class_exists('WPETCustomPostType')) {
     
             add_action( 'add_meta_boxes', [$this, 'wpet_add_meta_box_timer'] );
             add_action( 'save_post', [$this, 'wpet_save_metabox'], 10, 2);
-    
+            
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_jqueryUI' );
+
+            add_action( 'wp_ajax_get_new_sortable_list_order', [$this, 'wpet_ajax_get_list_order'] );
         }
     
         public function wpet_add_meta_box_timer() {
@@ -32,9 +34,6 @@ if(!class_exists('WPETCustomPostType')) {
         }
     
         public function wpet_metabox_property_html($post) {
-            $blockwidth = get_post_meta( $post->ID, 'wpet_gl_settings_blockwidth', true );
-            $options = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
-
             include("wpet-metaboxes-layout.php");
         }
 
@@ -46,9 +45,7 @@ if(!class_exists('WPETCustomPostType')) {
                 update_post_meta($post_id, 'wpet_gl_settings_blockwidth', sanitize_text_field( $_POST['wpet_gl_settings_blockwidth'] ));
             }
 
-            if(is_null( $_POST['wpet_gl_settings_options'] ) ) {
-                delete_post_meta( $post->ID, '_wpet_gl_settings_options' );
-            } else {
+            if(isset( $_POST['wpet_gl_settings_options'] ) ) {
                 $old_meta_data = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
                 $new_meta_data = $_POST['wpet_gl_settings_options'];
                 if(!empty($old_meta_data)) {
@@ -56,7 +53,15 @@ if(!class_exists('WPETCustomPostType')) {
                 } else {
                     add_post_meta($post_id, '_wpet_gl_settings_options', $new_meta_data , true );
                 }
+            } else {
+                delete_post_meta( $post->ID, '_wpet_gl_settings_options' );
             }
+        }
+
+        public function wpet_ajax_get_list_order() {
+            // Временная заглушка
+            $new_order_list = json_decode($_POST['order']);
+            echo $new_order_list;
         }
     
         public function wpet_custom_post_type() {
