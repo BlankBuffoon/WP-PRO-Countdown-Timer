@@ -10,6 +10,9 @@ if(!class_exists('WPETCustomPostType')) {
 
     class WPETCustomPostType {
 
+        public $post;
+        public $post_id;
+
         public function register() {
             add_action( 'init', [$this,'wpet_custom_post_type'] );
     
@@ -18,8 +21,6 @@ if(!class_exists('WPETCustomPostType')) {
             
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_jqueryUI' );
-
-            add_action( 'wp_ajax_get_new_sortable_list_order', [$this, 'wpet_ajax_get_list_order'] );
         }
     
         public function wpet_add_meta_box_timer() {
@@ -31,6 +32,12 @@ if(!class_exists('WPETCustomPostType')) {
                 'normal',
                 'default'
             );
+
+
+        }
+
+        public function wpet_init_custom_meta_box() {
+
         }
     
         public function wpet_metabox_property_html($post) {
@@ -48,6 +55,7 @@ if(!class_exists('WPETCustomPostType')) {
             if(isset( $_POST['wpet_gl_settings_options'] ) ) {
                 $old_meta_data = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
                 $new_meta_data = $_POST['wpet_gl_settings_options'];
+
                 if(!empty($old_meta_data)) {
                     update_post_meta($post_id, '_wpet_gl_settings_options', $new_meta_data );
                 } else {
@@ -56,12 +64,44 @@ if(!class_exists('WPETCustomPostType')) {
             } else {
                 delete_post_meta( $post->ID, '_wpet_gl_settings_options' );
             }
+
+            if ( isset( $_POST['wpet_sortable_list_order'] ) ) {
+                $list_order = json_decode( stripcslashes($_POST['wpet_sortable_list_order']), true );
+                $old_meta_data = get_post_meta( $post->ID, '_wpet_gl_settings_list_order', true );
+
+                update_post_meta($post_id, '_wpet_gl_settings_list_order', $list_order);
+
+                // if ( !empty($old_meta_data) ) {
+                //     update_post_meta($post_id, '_wpet_gl_settings_list_order', $list_order);
+                // } else {
+                //     add_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order, true );
+                // }
+            } else {
+                add_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order, true );
+            }
+
         }
 
         public function wpet_ajax_get_list_order() {
             // Временная заглушка
-            $new_order_list = json_decode($_POST['order']);
-            echo $new_order_list;
+
+            // $post_id = $_POST['post_id'];
+
+            // echo var_dump($post_id);
+
+            // $list_order = $_POST['order'];
+            // $old_meta_data = get_post_meta( $post_id, 'wpet_gl_settings_list_order', true );
+
+            // add_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order, true );
+            // update_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order);
+
+            // if (isset($old_meta_data)) {
+            //     update_post_meta($post->ID, '_wpet_gl_settings_list_order', $list_order);
+            // } else {
+            //     add_post_meta( $post->ID, '_wpet_gl_settings_list_order', $list_order, true );
+            // }
+            
+            //echo get_post_meta( $post->ID, 'wpet_gl_settings_list_order', true );;
         }
     
         public function wpet_custom_post_type() {

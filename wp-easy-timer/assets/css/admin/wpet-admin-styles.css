@@ -1,3 +1,30 @@
+.wpet_metabox {
+    display: flex;
+}
+
+.wpet_metabox * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wpet-metabox-menu ul {
+    height: 100%;
+}
+
+.wpet-metabox-menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    border-bottom: 1px solid rgb(93, 93, 93);
+}
+
+.wpet_metabox_wrapper {
+    margin-left: 14px;
+}
+
 .wpet_metabox_wrapper * {
     margin: 0;
     padding: 0;
@@ -7,7 +34,7 @@
 .wpet-grig-section {
     margin-bottom: 18px;
     display: grid;
-    grid-template-columns: 3.5fr 4fr 2fr;
+    grid-template-columns: 3fr 3.5fr 2fr;
     gap: 10px;
 }
 
@@ -22,4 +49,13 @@
 
 .wpet-grig-section.order ul li:not(:last-child) {
     margin-bottom: 4px;
+}
+
+.wpet-unavalible-information {
+    color: #6a0c0c;
+}
+
+.wpet-unavalible * {
+    display: none;
+    color: #909090;
 }
