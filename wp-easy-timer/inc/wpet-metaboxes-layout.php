@@ -16,16 +16,17 @@
         die;
     } 
 ?>
-<div class="wpet_metabox">
-    <div class="wpet-metabox-menu">
+<div class="wpet_metabox" id="wpet_metabox_tabs">
+    <!-- <div class="wpet-metabox-menu"> -->
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li><a class="wpet-vertical-menu-link" href="#general">General</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#heading">Heading</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#timer">Timer</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#paragraph">Paragraph</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#progress_bar">Progress Bar</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#button">Button</a></li>
         </ul>
-    </div>
+    <!-- </div> -->
     <section class="wpet_metabox_wrapper" id="general">
 
         <div class="wpet-grig-section blockwidth wpet-unavalible">
@@ -89,5 +90,25 @@
         </div>
 
         <input type="hidden" name="wpet_sortable_list_order" id="wpet_sortable_list_order" value="">
+    </section>
+
+    <section class="wpet_metabox_wrapper" id="heading">
+        <h2>Heading Settings</h2>
+    </section>
+
+    <section class="wpet_metabox_wrapper" id="timer">
+        <h2>Timer Settings</h2>
+    </section>
+
+    <section class="wpet_metabox_wrapper" id="paragraph">
+        <h2>Paragraph Settings</h2>
+    </section>
+
+    <section class="wpet_metabox_wrapper" id="progress_bar">
+        <h2>Progress Bar Settings</h2>
+    </section>
+    
+    <section class="wpet_metabox_wrapper" id="button">
+        <h2>Button Settings</h2>
     </section>
 </div>

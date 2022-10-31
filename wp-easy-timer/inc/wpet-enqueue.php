@@ -14,6 +14,7 @@ function wpet_enqueue_jqueryUI() {
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-slider' );
     wp_enqueue_script( 'jquery-ui-sortable' );
+    wp_enqueue_script( 'jquery-ui-tabs' );
 
     wp_enqueue_style( 'jquery-ui-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.13.1/themes/base/jquery-ui.css', true );
     wp_enqueue_style('jquery-ui-timepicker-addon', plugins_url('/../assets/css/admin/jquery-ui-timepicker-addon.css', __FILE__) );

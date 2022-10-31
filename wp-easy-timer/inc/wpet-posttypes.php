@@ -19,8 +19,8 @@ if(!class_exists('WPETCustomPostType')) {
             add_action( 'add_meta_boxes', [$this, 'wpet_add_meta_box_timer'] );
             add_action( 'save_post', [$this, 'wpet_save_metabox'], 10, 2);
             
-            add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_jqueryUI' );
+            add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
         }
     
         public function wpet_add_meta_box_timer() {
