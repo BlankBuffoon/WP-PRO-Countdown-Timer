@@ -5,12 +5,13 @@ Timepicker
 - [x] Create skin for date/time picker
   
 Main tasks
-- [ ] Vertical menu in PostType settings
-- [ ] Grid markup in post type settings
-- [ ] Create CSS styles
+- [x] Vertical menu in PostType settings
+- [x] Grid markup in post type settings
+- [x] Create CSS styles
+- [ ] Create Timer layout and functionality
 
 Other
-- [ ] Create metaboxes for custom posttype
+- [x] Create metaboxes for custom posttype
 - [ ] Create class (php, css) hierarchy
 - [ ] Think over the hierarchy of files for the layout of the post type settings page
 
