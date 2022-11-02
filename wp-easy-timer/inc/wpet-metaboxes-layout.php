@@ -4,9 +4,9 @@
 
     $show_meta = get_post_meta( $post->ID, '', true );
 
-    // echo '<pre>';
-    // print_r( $show_meta );
-    // echo '</pre>';
+    echo '<pre>';
+    print_r( $show_meta );
+    echo '</pre>';
 
     // echo '<pre>';
     // print_r( $_POST );
@@ -28,6 +28,8 @@
         </ul>
     <!-- </div> -->
     <section class="wpet_metabox_wrapper" id="general">
+
+        <h2>General Settings</h2>
 
         <div class="wpet-grig-section blockwidth wpet-unavalible">
             <label for="wpet_gl_settings_blockwidth">Ширина блока</label>
@@ -69,6 +71,7 @@
                 <li value="progress_bar" class="ui-state-default">Полоса прогресса<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
                 <li value="button" class="ui-state-default">Кнопка<span class="ui-icon ui-icon-arrowthick-2-n-s"></li>
             </ul>
+            <input type="hidden" name="wpet_gl_settings_listorder" id="wpet_gl_settings_listorder" value="">
         </div>
 
         <div class="wpet-grig-section timer_type wpet-unavalible">
@@ -86,29 +89,84 @@
             <p>Срок</p>
             <div>
                 <input class="datepicker" name="datepicker" placeholder="Введите дату и время">
+                <input type="hidden" name="wpet_gl_settings_datetime" id="wpet_gl_settings_datetime" value="">
             </div>
         </div>
-
-        <input type="hidden" name="wpet_sortable_list_order" id="wpet_sortable_list_order" value="">
     </section>
 
     <section class="wpet_metabox_wrapper" id="heading">
+
         <h2>Heading Settings</h2>
+
+        <div class="wpet-grig-section text">
+            <p>Текст заголовка</p>
+            <input type="text" name="wpet_heading_settings_text" id="wpet_heading_settings_text">
+        </div>
+
+        <div class="wpet-grig-section font">
+            <p>Размер текста</p>
+            <input type="number" name="wpet_heading_settings_fontsize" id="wpet_heading_settings_fontsize">
+            <label for="wpet_heading_settings_fontsize">px</label>
+        </div>
+
     </section>
 
     <section class="wpet_metabox_wrapper" id="timer">
+
         <h2>Timer Settings</h2>
+
+        <div class="wpet-grig-section font">
+            <p>Размер цифр</p>
+            <input type="number" name="wpet_tm_settings_fontsize" id="wpet_tm_settings_fontsize">
+            <label for="wpet_tm_settings_fontsize">px</label>
+        </div>
+
     </section>
 
     <section class="wpet_metabox_wrapper" id="paragraph">
+
         <h2>Paragraph Settings</h2>
+
+        <div class="wpet-grig-section text">
+            <p>Текст заголовка</p>
+            <input type="text" name="wpet_pgh_settings_text" id="wpet_pgh_settings_text">
+        </div>
+
+        <div class="wpet-grig-section font">
+            <p>Размер текста</p>
+            <input type="number" name="wpet_pgh_settings_fontsize" id="wpet_pgh_settings_fontsize">
+            <label for="wpet_pgh_settings_fontsize">px</label>
+        </div>
+
     </section>
 
     <section class="wpet_metabox_wrapper" id="progress_bar">
+
         <h2>Progress Bar Settings</h2>
+
+        <?php include('wpet-currently-unavalible-layout.php') ?>
+
     </section>
     
     <section class="wpet_metabox_wrapper" id="button">
+
         <h2>Button Settings</h2>
+
+        <div class="wpet-grig-section text">
+            <p>Текст кнопки</p>
+            <input type="text" name="wpet_btn_settings_text" id="wpet_btn_settings_text">
+        </div>
+
+        <div class="wpet-grig-section font">
+            <p>Размер текста</p>
+            <input type="number" name="wpet_btn_settings_fontsize" id="wpet_btn_settings_fontsize">
+            <label for="wpet_btn_settings_fontsize">px</label>
+        </div>
+
+        <div class="wpet-grig-section link">
+            <p>Ссылка</p>
+            <input type="text" name="wpet_btn_settings_link" id="wpet_btn_settings_link">
+        </div>
+
     </section>
 </div>

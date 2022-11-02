@@ -5,13 +5,16 @@ jQuery(function() {
         minDate		: 0,
         changeMonth	: true,
         changeYear	: true,
+        onSelect: function(date) {
+            jQuery( "#wpet_gl_settings_datetime" ).val(date);
+        }
     });
 
     jQuery("#sortable").sortable({
         update: function ( event, ui ) {
             let json_send = JSON.stringify(Object.assign({}, jQuery(this).sortable("toArray", {attribute: 'value'})));
 
-            jQuery("#wpet_sortable_list_order").val(json_send)
+            jQuery("#wpet_gl_settings_listorder").val(json_send)
         }
     });
 

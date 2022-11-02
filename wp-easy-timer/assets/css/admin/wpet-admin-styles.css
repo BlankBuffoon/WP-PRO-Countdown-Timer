@@ -21,8 +21,9 @@
     border-bottom: 1px solid rgb(93, 93, 93);
 }
 
-.wpet_metabox_wrapper {
-    /* margin-left: 14px; */
+.wpet_metabox_wrapper h2 {
+    padding: 0 !important;
+    margin-bottom: 8px !important;
 }
 
 .wpet_metabox_wrapper * {
@@ -58,6 +59,14 @@
 .wpet-unavalible * {
     display: none;
     color: #909090;
+}
+
+.wpet-grig-section.text {
+    align-items: center;
+}
+
+.wpet-grig-section.font {
+    align-items: center;
 }
 
 /* jQuery UI Tabs Styles */
