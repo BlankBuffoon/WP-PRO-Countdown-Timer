@@ -165,6 +165,7 @@ if(!class_exists('WPETCustomPostType')) {
                 'rewrite' => array( 'slug' => 'timer' ),
                 'label' => 'Таймеры',
                 'supports' => array('title'),
+                'menu_icon'=> 'dashicons-clock',
             ));
         }
     }

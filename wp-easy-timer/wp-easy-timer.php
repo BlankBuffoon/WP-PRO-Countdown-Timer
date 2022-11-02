@@ -20,6 +20,8 @@ if(!class_exists('WPETCustomPostType')) {
     require WPEASYTIMER_PATH . 'inc/wpet-posttypes.php';
 }
 
+require WPEASYTIMER_PATH . 'inc/wpet-shortcodes.php';
+
 class wpeasytimer {
 
     static function activation() {
