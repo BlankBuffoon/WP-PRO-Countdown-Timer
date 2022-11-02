@@ -9,6 +9,17 @@ Main tasks
 - [x] Grid markup in post type settings
 - [x] Create CSS styles
 - [ ] Create Timer layout and functionality
+- [ ] Make support for language packs
+- [ ] Create default values for metaboxes, or write an error output function when there is a lack of input data
+- [ ] Timer functionality
+- [ ] Shortcode generation
+
+Build testing
+- [ ] Installation
+- [ ] Deinstalation
+- [ ] Metaboxes functionallity
+- [ ] Metaboxes default values
+- [ ] Shortcodes generation
 
 Other
 - [x] Create metaboxes for custom posttype

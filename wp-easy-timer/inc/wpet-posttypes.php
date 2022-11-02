@@ -147,9 +147,9 @@ if(!class_exists('WPETCustomPostType')) {
                 add_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'], true );
             }
 
-             // Button Settings Link
+            // Button Settings Link
 
-             if( isset( $_POST['wpet_btn_settings_link'] ) ) {
+            if( isset( $_POST['wpet_btn_settings_link'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'] );
             } else {
                 add_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'], true );
