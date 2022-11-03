@@ -40,6 +40,23 @@ if(!class_exists('WPETCustomPostType')) {
 
         public function wpet_save_metabox($post_id, $post) {
 
+            if ( !isset($_POST['_wpet']) || !wp_verify_nonce($_POST['_wpet'], 'wpetmetaboxfields') ) {
+                return $post_id;
+            }
+
+            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+                return $post_id;
+            }
+
+            if ($post->post_type != 'timer') {
+                return $post_id;
+            }
+
+            $post_type = get_post_type_object($post->post_type);
+            if ( !current_user_can($post_type->cap->edit_post, $post_id)) {
+                return $post_id;
+            }
+
             // Global Settings BlockWidth
             /*
             if(is_null($_POST['wpet_gl_settings_blockwidth'])) {
@@ -88,7 +105,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_gl_settings_datetime'] ) ) {
                 update_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'] );
             } else {
-                add_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'], true );
+                //add_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'], true );
             }
 
             // Heading Settings Text
@@ -96,7 +113,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_heading_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_heading_settings_text', $_POST['wpet_heading_settings_text'] );
             } else {
-                add_post_meta( $post_id, 'wpet_heading_settings_text', $_POST['wpet_heading_settings_text'], true );
+                //add_post_meta( $post_id, 'wpet_heading_settings_text', $_POST['wpet_heading_settings_text'], true );
             }
 
             // Heading Settings Font Size
@@ -104,7 +121,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_heading_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_heading_settings_fontsize', $_POST['wpet_heading_settings_fontsize'] );
             } else {
-                add_post_meta( $post_id, 'wpet_heading_settings_fontsize', $_POST['wpet_heading_settings_fontsize'], true );
+                //add_post_meta( $post_id, 'wpet_heading_settings_fontsize', $_POST['wpet_heading_settings_fontsize'], true );
             }
 
             // Timer Settings Font Size
@@ -112,7 +129,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_tm_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_tm_settings_fontsize', $_POST['wpet_tm_settings_fontsize'] );
             } else {
-                add_post_meta( $post_id, 'wpet_tm_settings_fontsize', $_POST['wpet_tm_settings_fontsize'], true );
+                //add_post_meta( $post_id, 'wpet_tm_settings_fontsize', $_POST['wpet_tm_settings_fontsize'], true );
             }
 
             // Paragraph Settings Text
@@ -120,7 +137,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_pgh_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_pgh_settings_text', $_POST['wpet_pgh_settings_text'] );
             } else {
-                add_post_meta( $post_id, 'wpet_pgh_settings_text', $_POST['wpet_pgh_settings_text'], true );
+                //add_post_meta( $post_id, 'wpet_pgh_settings_text', $_POST['wpet_pgh_settings_text'], true );
             }
 
             // Paragraph Settings Font Size
@@ -128,7 +145,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_pgh_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_pgh_settings_fontsize', $_POST['wpet_pgh_settings_fontsize'] );
             } else {
-                add_post_meta( $post_id, 'wpet_pgh_settings_fontsize', $_POST['wpet_pgh_settings_fontsize'], true );
+                //add_post_meta( $post_id, 'wpet_pgh_settings_fontsize', $_POST['wpet_pgh_settings_fontsize'], true );
             }
 
             // Button Settings Text
@@ -136,7 +153,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_text', $_POST['wpet_btn_settings_text'] );
             } else {
-                add_post_meta( $post_id, 'wpet_btn_settings_text', $_POST['wpet_btn_settings_text'], true );
+                //add_post_meta( $post_id, 'wpet_btn_settings_text', $_POST['wpet_btn_settings_text'], true );
             }
 
             // Button Settings Font Size
@@ -144,7 +161,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'] );
             } else {
-                add_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'], true );
+                //add_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'], true );
             }
 
             // Button Settings Link
@@ -152,9 +169,10 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_link'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'] );
             } else {
-                add_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'], true );
+                //add_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'], true );
             }
 
+            return $post_id;
         }
     
         public function wpet_custom_post_type() {
