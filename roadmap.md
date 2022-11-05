@@ -1,4 +1,4 @@
-# Current Roadmap
+# Current Roadmap to v1.0
 
 Timepicker
 - [x] Fix Timepicker Error Log
@@ -8,11 +8,29 @@ Main tasks
 - [x] Vertical menu in PostType settings
 - [x] Grid markup in post type settings
 - [x] Create CSS styles
-- [ ] Create Timer layout and functionality
-- [ ] Make support for language packs
-- [ ] Create default values for metaboxes, or write an error output function when there is a lack of input data
-- [ ] Timer functionality
-- [ ] Shortcode generation
+- [x] *Partly* Create default values for metaboxes, or write an error output function when there is a lack of input data
+  - [x] Make automatic substitution of default values when there is a lack of data from the admin panel
+  - [ ] Fix the die stub in the shortcode output (gl_datetime) **MVP**
+  - [ ] Write automatic generation of the end date, if there is no corresponding value in metabox
+- [x] Shortcode generation
+- [ ] Clean the code from comments and output debugging information
+- [ ] Make language support
+- [ ] Write documentation for the plugin
+
+Timer Functionallity **MVP**
+- [ ] Create Timer layout
+- [ ] Calculating the remaining time until the scheduled date
+- [ ] Calculating the time zone from Wordpress settings
+- [ ] Layout
+  - [ ] Main sections
+    - [ ] Heading
+    - [ ] Paragraph
+    - [ ] Button
+  - [ ] Timer Sections
+    - [ ] Numbers
+  - [ ] Adaptive
+    - [ ] Tablet
+    - [ ] Mobile
 
 Build testing
 - [ ] Installation

@@ -5,7 +5,7 @@
 
     wp_nonce_field('wpetmetaboxfields', '_wpet');
 
-    $gl_options = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
+    $gl_options = get_post_meta( $post->ID, 'wpet_gl_settings_options', true );
     if ( empty( $gl_options ) ) { settype( $gl_options, "array" ); }
 
     $gl_gatetime = get_post_meta( $post->ID, 'wpet_gl_settings_datetime', true );
@@ -24,14 +24,9 @@
 
     $show_meta = get_post_meta( $post->ID, '', true );
 
-    // echo '<pre>';
-    // print_r( $show_meta );
-    // echo '</pre>';
-
-    // echo '<pre>';
-    // echo "234";
-    // print_r($gl_options);
-    // echo '</pre>';
+    echo '<pre>';
+    print_r( $show_meta );
+    echo '</pre>';
 ?>
 <div class="wpet_metabox" id="wpet_metabox_tabs">
         <ul>

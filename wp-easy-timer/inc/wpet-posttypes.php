@@ -10,9 +10,6 @@ if(!class_exists('WPETCustomPostType')) {
 
     class WPETCustomPostType {
 
-        public $post;
-        public $post_id;
-
         public function register() {
             add_action( 'init', [$this,'wpet_custom_post_type'] );
     
@@ -21,6 +18,30 @@ if(!class_exists('WPETCustomPostType')) {
             
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_jqueryUI' );
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
+
+            add_action( 'manage_timer_posts_columns', [$this, 'wpet_posttype_columns']);
+            add_action( 'manage_timer_posts_custom_column', [$this, 'wpet_custom_posttype_columns'], 10, 2);
+        }
+
+        public function wpet_posttype_columns($columns) {
+
+            $custom_column_order = array(
+                'title' => $columns['title'],
+                'wpet_shortcode' => esc_html__('Shortcode', 'wpeasytimer'),
+                'date' => $columns['date'],
+            );
+
+            return $custom_column_order;
+        }
+
+        public function wpet_custom_posttype_columns($column, $post_id) {
+
+            switch( $column ) {
+                case 'wpet_shortcode':
+                    echo '<div>[wpet-timer id="'.$post_id.'"]</div> <br/>';
+                    break;
+            }
+
         }
     
         public function wpet_add_meta_box_timer() {
@@ -69,16 +90,16 @@ if(!class_exists('WPETCustomPostType')) {
             // Global Settings Options
 
             if(isset( $_POST['wpet_gl_settings_options'] ) ) {
-                $old_meta_data = get_post_meta( $post->ID, '_wpet_gl_settings_options', true );
+                $old_meta_data = get_post_meta( $post->ID, 'wpet_gl_settings_options', true );
                 $new_meta_data = $_POST['wpet_gl_settings_options'];
 
                 if(!empty($old_meta_data)) {
-                    update_post_meta($post_id, '_wpet_gl_settings_options', $new_meta_data );
+                    update_post_meta($post_id, 'wpet_gl_settings_options', $new_meta_data );
                 } else {
-                    add_post_meta($post_id, '_wpet_gl_settings_options', $new_meta_data , true );
+                    add_post_meta($post_id, 'wpet_gl_settings_options', $new_meta_data , true );
                 }
             } else {
-                delete_post_meta( $post->ID, '_wpet_gl_settings_options' );
+                delete_post_meta( $post->ID, 'wpet_gl_settings_options' );
             }
 
             // Global Settings Order

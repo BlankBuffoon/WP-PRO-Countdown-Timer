@@ -14,13 +14,24 @@ if ( !defined('ABSPATH') ) {
     die;
 }
 
-define('WPEASYTIMER_PATH', plugin_dir_path(__FILE__));
+// Plugin Dir Path
+if (!defined('WPEASYTIMER_PATH')) {
+    define('WPEASYTIMER_PATH', plugin_dir_path(__FILE__));
+}
+
+// Plugin Prefix
+if (!defined('WPEASYTIMER_PREFIX')) {
+    define('WPEASYTIMER_PREFIX', 'wpet_');
+}
+
 
 if(!class_exists('WPETCustomPostType')) {
     require WPEASYTIMER_PATH . 'inc/wpet-posttypes.php';
 }
 
-require WPEASYTIMER_PATH . 'inc/wpet-shortcodes.php';
+if(!class_exists('WPETShortcodes')) {
+    require WPEASYTIMER_PATH . 'inc/wpet-shortcodes.php';
+}
 
 class wpeasytimer {
 
