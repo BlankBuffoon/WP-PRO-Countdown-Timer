@@ -31,6 +31,7 @@ Main tasks
   - [ ] Adaptive
     - [ ] Tablet
     - [ ] Mobile
+- [x] Support for multiple timers on one page
 
 Build testing
 - [ ] Installation

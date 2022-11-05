@@ -6,6 +6,6 @@
     <div class="timer__item timer__seconds">00</div>
   </div>
   <div class="timer__result"></div>
+  <input type="hidden" name="wpet-timer_id" value="<?= $options['timer_id'] ?>">
+  <input type="hidden" name="wpet-timer_datetime" value="<?= $options['gl_datetime'] ?>">
 </div>
-<input type="hidden" name="wpet-timer_id" value="<?= $options['timer_id'] ?>">
-<input type="hidden" name="wpet-timer_datetime" value="<?= $options['gl_datetime'] ?>">

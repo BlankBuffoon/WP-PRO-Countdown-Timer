@@ -10,7 +10,7 @@ function wpet_enqueue_admin() {
 }
 
 function wpet_enqueue_front() {
-    wp_enqueue_script( 'wpet_timer_script', plugins_url('/../assets/js/front/wpet-timer-scripts.js', __FILE__), array('jquery'), '1.0', true );
+    wp_register_script( 'wpet_timer_script', plugins_url('/../assets/js/front/wpet-timer-scripts.js', __FILE__), array('jquery'), '1.0', true );
     wp_enqueue_style( 'wpet_timer_style', plugins_url('/../assets/css/front/wpet-timer-styles.css', __FILE__) );
 }
 

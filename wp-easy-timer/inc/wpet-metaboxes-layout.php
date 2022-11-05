@@ -66,7 +66,7 @@
                     <label for="wpet_gl_settings_options_paragraph">Подзаголовок</label><br>
                 </div>
                 <div>
-                    <input type="checkbox" id="wpet_gl_settings_options_progress_bar" name="wpet_gl_settings_options[]" value="progress_bar" <?= in_array('progress_bar', $gl_options) ? 'checked="checked"' : '' ?>>
+                    <input disabled type="checkbox" id="wpet_gl_settings_options_progress_bar" name="wpet_gl_settings_options[]" value="progress_bar" <?= in_array('progress_bar', $gl_options) ? 'checked="checked"' : '' ?>>
                     <label for="wpet_gl_settings_options_progress_bar">Полоса прогресса</label>
                 </div>
                 <div>

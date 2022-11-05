@@ -61,28 +61,16 @@ class WPETShortcodes{
         // $options['btn_link'] = get_post_meta($id, $prefix.'btn_settings_link', true);
         $options['btn_link'] = empty( get_post_meta($id, $prefix.'btn_settings_link', true) ) ? '#' : get_post_meta($id, $prefix.'btn_settings_link', true);
 
+        // JS Timer Script
+        wp_enqueue_script( 'wpet_timer_script' );
+        
+        // Timer Layout
         ob_start();
 
         echo '<div class="wpet-timer-wrapper">';
 
-        if (in_array('heading', $options['gl_options'])) {
-            include WPEASYTIMER_PATH . '/inc/shortcodes/heading.php';
-        }
-
-        if (in_array('timer', $options['gl_options'])) {
-            include WPEASYTIMER_PATH . '/inc/shortcodes/timer.php';
-        }
-
-        if (in_array('paragraph', $options['gl_options'])) {
-            include WPEASYTIMER_PATH . '/inc/shortcodes/paragraph.php';
-        }
-
-        // if (in_array('progress_bar', $options['gl_options'])) {
-        //     include WPEASYTIMER_PATH . '/inc/shortcodes/progress_bar.php';
-        // }
-
-        if (in_array('button', $options['gl_options'])) {
-            include WPEASYTIMER_PATH . '/inc/shortcodes/button.php';
+        foreach ($options['gl_options'] as $section) {
+            include WPEASYTIMER_PATH . '/inc/shortcodes/'. $section . '.php';
         }
 
         echo '</div>';

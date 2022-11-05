@@ -1,13 +1,4 @@
-const timer_id = '.timer-' + document.querySelector('input[name="wpet-timer_id"]').value;
-let timer_datetime = document.querySelector('input[name="wpet-timer_datetime"]').value;
-
-let year = timer_datetime.slice(6, 10);
-let month = timer_datetime.slice(3, 5) - 1;
-let day = timer_datetime.slice(0, 2);
-let hour = timer_datetime.slice(11, 13);
-let minute = timer_datetime.slice(14, 16);
-
-// класс для создание таймера обратного отсчета
+// Timer Class
 class CountdownTimer {
     constructor(deadline, cbChange, cbComplete) {
         this._deadline = deadline;
@@ -49,29 +40,40 @@ class CountdownTimer {
     }
 }
 
-// 1. Получим элементы в которые нужно вывести оставшееся количество дней, часов, минут и секунд
-const elDays1 = document.querySelector(timer_id + ' .timer__days');
-const elHours1 = document.querySelector(timer_id + ' .timer__hours');
-const elMinutes1 = document.querySelector(timer_id + ' .timer__minutes');
-const elSeconds1 = document.querySelector(timer_id + ' .timer__seconds');
+const timers = document.querySelectorAll(".wpet-timer-timer");
 
-// 2. Установим время, например, на одну минуту от текущей даты
-const deadline1 = new Date(year, month, day, hour, minute);
+timers.forEach(timer => {
+    // Timer data
+    let timer_id = '.timer-' + timer.querySelector('input[name="wpet-timer_id"]').value;
+    let timer_datetime = timer.querySelector('input[name="wpet-timer_datetime"]').value;
 
-console.log(year, month, day, hour, minute);
+    // Timer datetime parse
+    let year = timer_datetime.slice(6, 10);
+    let month = timer_datetime.slice(3, 5) - 1;
+    let day = timer_datetime.slice(0, 2);
+    let hour = timer_datetime.slice(11, 13);
+    let minute = timer_datetime.slice(14, 16);
 
-console.log(deadline1);
+    // Timer elements
+    let elDays = document.querySelector(timer_id + ' .timer__days');
+    let elHours = document.querySelector(timer_id + ' .timer__hours');
+    let elMinutes = document.querySelector(timer_id + ' .timer__minutes');
+    let elSeconds = document.querySelector(timer_id + ' .timer__seconds');
 
-// 3. Создадим новый объект, используя new CountdownTimer()
-new CountdownTimer(deadline1, (timer) => {
-  elDays1.textContent = timer.days;
-  elHours1.textContent = timer.hours;
-  elMinutes1.textContent = timer.minutes;
-  elSeconds1.textContent = timer.seconds;
-  elDays1.dataset.title = timer.daysTitle;
-  elHours1.dataset.title = timer.hoursTitle;
-  elMinutes1.dataset.title = timer.minutesTitle;
-  elSeconds1.dataset.title = timer.secondsTitle;
-}, () => {
-  document.querySelector(timer_id + ' .timer__result').textContent = 'Таймер завершился!';
+    // Datetime
+    let deadline = new Date(year, month, day, hour, minute);
+
+    // New Timer Obj
+    new CountdownTimer(deadline, (timer) => {
+        elDays.textContent = timer.days;
+        elHours.textContent = timer.hours;
+        elMinutes.textContent = timer.minutes;
+        elSeconds.textContent = timer.seconds;
+        elDays.dataset.title = timer.daysTitle;
+        elHours.dataset.title = timer.hoursTitle;
+        elMinutes.dataset.title = timer.minutesTitle;
+        elSeconds.dataset.title = timer.secondsTitle;
+      }, () => {
+        document.querySelector(timer_id + ' .timer__result').textContent = 'Таймер завершился!';
+      });
 });
