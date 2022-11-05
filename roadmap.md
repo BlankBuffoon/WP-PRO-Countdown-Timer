@@ -19,15 +19,15 @@ Main tasks
 
 **MVP** Timer Functionallity
 - [ ] Create Timer layout
-- [ ] Calculating the remaining time until the scheduled date
+- [x] Calculating the remaining time until the scheduled date
 - [ ] Calculating the time zone from Wordpress settings
 - [ ] Layout
   - [ ] Main sections
     - [ ] Heading
     - [ ] Paragraph
     - [ ] Button
-  - [ ] Timer Sections
-    - [ ] Numbers
+  - [x] Timer Sections
+    - [x] Numbers
   - [ ] Adaptive
     - [ ] Tablet
     - [ ] Mobile
@@ -37,7 +37,7 @@ Build testing
 - [ ] Deinstalation
 - [ ] Metaboxes functionallity
 - [ ] Metaboxes default values
-- [ ] Shortcodes generation
+- [x] Shortcodes generation
 
 Other
 - [x] Create metaboxes for custom posttype

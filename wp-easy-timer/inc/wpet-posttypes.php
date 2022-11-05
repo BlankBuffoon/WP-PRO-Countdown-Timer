@@ -19,6 +19,8 @@ if(!class_exists('WPETCustomPostType')) {
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_jqueryUI' );
             add_action( 'admin_enqueue_scripts', 'wpet_enqueue_admin' );
 
+            add_action( 'wp_enqueue_scripts', 'wpet_enqueue_front' );
+
             add_action( 'manage_timer_posts_columns', [$this, 'wpet_posttype_columns']);
             add_action( 'manage_timer_posts_custom_column', [$this, 'wpet_custom_posttype_columns'], 10, 2);
         }
