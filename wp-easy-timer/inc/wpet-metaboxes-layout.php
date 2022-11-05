@@ -24,9 +24,11 @@
 
     $show_meta = get_post_meta( $post->ID, '', true );
 
-    echo '<pre>';
-    print_r( $show_meta );
-    echo '</pre>';
+    // Debug
+
+    // echo '<pre>';
+    // print_r( $show_meta );
+    // echo '</pre>';
 ?>
 <div class="wpet_metabox" id="wpet_metabox_tabs">
         <ul>
