@@ -20,9 +20,9 @@ Main tasks
 **MVP** Timer Functionallity
 - [ ] Create Timer layout
 - [x] Calculating the remaining time until the scheduled date
-- [ ] Calculating the time zone from Wordpress settings
+- [x] Calculating the time zone from Wordpress settings
   - [x] UTC Format
-  - [ ] String Format
+  - [x] String Format
 - [ ] Layout
   - [ ] Main sections
     - [ ] Heading

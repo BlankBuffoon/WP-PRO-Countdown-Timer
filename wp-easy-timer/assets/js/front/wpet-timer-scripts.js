@@ -40,6 +40,45 @@ class CountdownTimer {
     }
 }
 
+// Convert float number to time
+function convertNumToTime(number) {
+    // Check sign of given number
+    var sign = (number >= 0) ? 1 : -1;
+
+    // Set positive value of number of sign negative
+    number = number * sign;
+
+    // Separate the int from the decimal part
+    var hour = Math.floor(number);
+    var decpart = number - hour;
+
+    var min = 1 / 60;
+    // Round to nearest minute
+    decpart = min * Math.round(decpart / min);
+
+    var minute = Math.floor(decpart * 60) + '';
+
+    // Add padding if need
+    if (minute.length < 2) {
+    minute = '0' + minute; 
+    }
+
+    hour = hour.toString();
+    if (hour.length < 2) {
+    hour = '0' + hour; 
+    }
+
+    // Add Sign in final result
+    sign = sign == 1 ? '+' : '-';
+
+    // Concate hours and minutes
+    time = sign + hour + ':' + minute;
+
+    return time;
+}
+
+
+// Multitimer support
 const timers = document.querySelectorAll(".wpet-timer-timer");
 
 timers.forEach(timer => {
@@ -55,7 +94,9 @@ timers.forEach(timer => {
     let hour = timer_datetime.slice(11, 13);
     let minute = timer_datetime.slice(14, 16);
 
-    let deadline_datetime = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + timer_timezone;
+    let deadline_datetime = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + convertNumToTime(timer_timezone);
+
+    console.log(convertNumToTime(timer_timezone));
 
     // Timer elements
     let elDays = document.querySelector(timer_id + ' .timer__days');
