@@ -46,13 +46,16 @@ timers.forEach(timer => {
     // Timer data
     let timer_id = '.timer-' + timer.querySelector('input[name="wpet-timer_id"]').value;
     let timer_datetime = timer.querySelector('input[name="wpet-timer_datetime"]').value;
+    let timer_timezone = timer.querySelector('input[name="wpet-timer_timezone"]').value;
 
     // Timer datetime parse
     let year = timer_datetime.slice(6, 10);
-    let month = timer_datetime.slice(3, 5) - 1;
+    let month = timer_datetime.slice(3, 5);
     let day = timer_datetime.slice(0, 2);
     let hour = timer_datetime.slice(11, 13);
     let minute = timer_datetime.slice(14, 16);
+
+    let deadline_datetime = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + timer_timezone;
 
     // Timer elements
     let elDays = document.querySelector(timer_id + ' .timer__days');
@@ -61,7 +64,7 @@ timers.forEach(timer => {
     let elSeconds = document.querySelector(timer_id + ' .timer__seconds');
 
     // Datetime
-    let deadline = new Date(year, month, day, hour, minute);
+    let deadline = new Date(Date.parse(deadline_datetime));
 
     // New Timer Obj
     new CountdownTimer(deadline, (timer) => {
@@ -73,7 +76,5 @@ timers.forEach(timer => {
         elHours.dataset.title = timer.hoursTitle;
         elMinutes.dataset.title = timer.minutesTitle;
         elSeconds.dataset.title = timer.secondsTitle;
-      }, () => {
-        document.querySelector(timer_id + ' .timer__result').textContent = 'Таймер завершился!';
-      });
+      }, () => {});
 });

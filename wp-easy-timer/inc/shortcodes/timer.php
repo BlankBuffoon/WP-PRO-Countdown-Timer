@@ -8,4 +8,5 @@
   <div class="timer__result"></div>
   <input type="hidden" name="wpet-timer_id" value="<?= $options['timer_id'] ?>">
   <input type="hidden" name="wpet-timer_datetime" value="<?= $options['gl_datetime'] ?>">
+  <input type="hidden" name="wpet-timer_timezone" value="<?= wp_timezone()->getName() ?>">
 </div>
