@@ -1,4 +1,4 @@
-<div class="wpet-timer-timer timer-<?= $options['timer_id'] ?>" style="display: flex; justify-content: center;">
+<div class="wpet-timer-timer timer-<?= $options['timer_id'] ?>">
   <div class="timer__items">
     <div class="timer__item timer__days">00</div>
     <div class="timer__item timer__hours">00</div>

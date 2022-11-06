@@ -94,9 +94,8 @@ timers.forEach(timer => {
     let hour = timer_datetime.slice(11, 13);
     let minute = timer_datetime.slice(14, 16);
 
-    let deadline_datetime = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + convertNumToTime(timer_timezone);
-
-    console.log(convertNumToTime(timer_timezone));
+    // Convert to ISO 8601
+    let iso8601_datetime = year + '-' + month + '-' + day + 'T' + hour + ':' + minute + convertNumToTime(timer_timezone);
 
     // Timer elements
     let elDays = document.querySelector(timer_id + ' .timer__days');
@@ -105,7 +104,7 @@ timers.forEach(timer => {
     let elSeconds = document.querySelector(timer_id + ' .timer__seconds');
 
     // Datetime
-    let deadline = new Date(Date.parse(deadline_datetime));
+    let deadline = new Date(Date.parse(iso8601_datetime));
 
     // New Timer Obj
     new CountdownTimer(deadline, (timer) => {

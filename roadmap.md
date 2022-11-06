@@ -14,25 +14,24 @@ Main tasks
   - [ ] Write automatic generation of the end date, if there is no corresponding value in metabox
 - [x] Shortcode generation
 - [ ] Clean the code from comments and output debugging information
-- [ ] Make language support
 - [ ] Write documentation for the plugin
 
 **MVP** Timer Functionallity
-- [ ] Create Timer layout
+- [x] Create Timer layout
 - [x] Calculating the remaining time until the scheduled date
 - [x] Calculating the time zone from Wordpress settings
   - [x] UTC Format
   - [x] String Format
-- [ ] Layout
-  - [ ] Main sections
-    - [ ] Heading
-    - [ ] Paragraph
-    - [ ] Button
+- [x] Layout
+  - [x] Main sections
+    - [x] Heading
+    - [x] Paragraph
+    - [x] Button
   - [x] Timer Sections
     - [x] Numbers
-  - [ ] Adaptive
-    - [ ] Tablet
-    - [ ] Mobile
+  - [x] Adaptive
+    - [x] Tablet
+    - [x] Mobile
 - [x] Support for multiple timers on one page
 
 Build testing
@@ -49,3 +48,6 @@ Other
 
 Constantly
 - [ ] Refactor
+
+For next versions
+- [ ] Make language support
