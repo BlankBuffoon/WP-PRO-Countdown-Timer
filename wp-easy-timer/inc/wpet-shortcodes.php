@@ -35,7 +35,19 @@ class WPETShortcodes{
         ) : get_post_meta($id, $prefix.'gl_settings_options', true);
 
         // $options['gl_datetime'] = get_post_meta($id, $prefix.'gl_settings_datetime', true);
-        $options['gl_datetime'] = empty( get_post_meta($id, $prefix.'gl_settings_datetime', true) ) ? die : get_post_meta($id, $prefix.'gl_settings_datetime', true);
+
+        if ( empty( get_post_meta($id, $prefix.'gl_settings_datetime', true) ) ) {
+            ob_start();
+            echo '<div>';
+            echo '<p style="text-align: center;"><b>WP Easy Timer ERROR</b><br>Ошибка конечной даты!</p>';
+            echo '</div>';
+            $error = ob_get_clean();
+            return $error;
+        } else {
+            $options['gl_datetime'] = get_post_meta($id, $prefix.'gl_settings_datetime', true);
+        }
+
+        //$options['gl_datetime'] = empty( get_post_meta($id, $prefix.'gl_settings_datetime', true) ) ? die : get_post_meta($id, $prefix.'gl_settings_datetime', true);
 
         // $options['heading_text'] = get_post_meta($id, $prefix.'heading_settings_text', true);
         $options['heading_text'] = empty( get_post_meta($id, $prefix.'heading_settings_text', true) ) ? 'Heading' : get_post_meta($id, $prefix.'heading_settings_text', true);
@@ -44,7 +56,7 @@ class WPETShortcodes{
         $options['heading_fontsize'] = empty( get_post_meta($id, $prefix.'heading_settings_fontsize', true) ) ? '24' : get_post_meta($id, $prefix.'heading_settings_fontsize', true);
 
         // $options['tm_fontsize'] = get_post_meta($id, $prefix.'tm_settings_fontsize', true);
-        $options['tm_fontsize'] = empty( get_post_meta($id, $prefix.'tm_settings_fontsize', true) ) ? '18' : get_post_meta($id, $prefix.'tm_settings_fontsize', true);
+        $options['tm_fontsize'] = empty( get_post_meta($id, $prefix.'tm_settings_fontsize', true) ) ? '48' : get_post_meta($id, $prefix.'tm_settings_fontsize', true);
 
         // $options['pgh_text'] = get_post_meta($id, $prefix.'pgh_settings_text', true);
         $options['pgh_text'] = empty( get_post_meta($id, $prefix.'pgh_settings_text', true) ) ? 'Paragraph' :  get_post_meta($id, $prefix.'pgh_settings_text', true);
@@ -70,7 +82,7 @@ class WPETShortcodes{
         echo '<div class="wpet-timer-wrapper">';
 
         foreach ($options['gl_options'] as $section) {
-            include WPEASYTIMER_PATH . '/inc/shortcodes/'. $section . '.php';
+            include WPEASYTIMER_PATH . '/inc/templates/'. $section . '.php';
         }
 
         echo '</div>';

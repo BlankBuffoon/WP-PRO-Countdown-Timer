@@ -125,10 +125,18 @@ if(!class_exists('WPETCustomPostType')) {
 
             // Global Settings DateTime
 
+
             if( isset( $_POST['wpet_gl_settings_datetime'] ) ) {
-                update_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'] );
+                if ( empty( $_POST['wpet_gl_settings_datetime'] ) ) {
+                    $current_time = wp_date('d.m.Y H:i');
+                    $current_time = strtotime( "+1 MONTH", strtotime($current_time) );
+                    $current_time = date( 'd.m.Y H:i', $current_time );
+                    update_post_meta( $post_id, 'wpet_gl_settings_datetime', $current_time );
+                } else {
+                    update_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'] );
+                }
             } else {
-                //add_post_meta( $post_id, 'wpet_gl_settings_datetime', $_POST['wpet_gl_settings_datetime'], true );
+                delete_post_meta( $post_id, 'wpet_gl_settings_datetime' );
             }
 
             // Heading Settings Text

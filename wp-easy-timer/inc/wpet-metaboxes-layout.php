@@ -26,22 +26,22 @@
 
     // Debug
 
-    // echo '<pre>';
-    // print_r( $show_meta );
-    // echo '</pre>';
+    echo '<pre>';
+    print_r( $show_meta );
+    echo '</pre>';
 ?>
 <div class="wpet_metabox" id="wpet_metabox_tabs">
         <ul>
-            <li><a class="wpet-vertical-menu-link" href="#general">General</a></li>
-            <li><a class="wpet-vertical-menu-link" href="#heading">Heading</a></li>
-            <li><a class="wpet-vertical-menu-link" href="#timer">Timer</a></li>
-            <li><a class="wpet-vertical-menu-link" href="#paragraph">Paragraph</a></li>
-            <li><a class="wpet-vertical-menu-link" href="#progress_bar">Progress Bar</a></li>
-            <li><a class="wpet-vertical-menu-link" href="#button">Button</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#general">Основное</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#heading">Заголовок</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#timer">Таймер</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#paragraph">Параграф</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#progress_bar">Полоса прогресса</a></li>
+            <li><a class="wpet-vertical-menu-link" href="#button">Кнопка</a></li>
         </ul>
     <section class="wpet_metabox_wrapper" id="general">
 
-        <h2>General Settings</h2>
+        <h2>Основные настройки</h2>
 
         <!--
         <div class="wpet-grig-section blockwidth wpet-unavalible">
@@ -119,7 +119,7 @@
 
     <section class="wpet_metabox_wrapper" id="heading">
 
-        <h2>Heading Settings</h2>
+        <h2>Настройки заголовка</h2>
 
         <div class="wpet-grig-section text">
             <p>Текст заголовка</p>
@@ -136,7 +136,7 @@
 
     <section class="wpet_metabox_wrapper" id="timer">
 
-        <h2>Timer Settings</h2>
+        <h2>Настройки таймера</h2>
 
         <div class="wpet-grig-section fontsize">
             <p>Размер цифр</p>
@@ -148,11 +148,11 @@
 
     <section class="wpet_metabox_wrapper" id="paragraph">
 
-        <h2>Paragraph Settings</h2>
+        <h2>Настройки параграфа</h2>
 
         <div class="wpet-grig-section text">
             <p>Текст заголовка</p>
-            <input type="text" name="wpet_pgh_settings_text" id="wpet_pgh_settings_text" value="<?= $paragraph_text ?>">
+            <textarea type="text" name="wpet_pgh_settings_text" id="wpet_pgh_settings_text" value="<?= $paragraph_text ?>" rows="5"></textarea>
         </div>
 
         <div class="wpet-grig-section fontsize">
@@ -165,7 +165,7 @@
 
     <section class="wpet_metabox_wrapper" id="progress_bar">
 
-        <h2>Progress Bar Settings</h2>
+        <h2>Настройки полосы прогресса</h2>
 
         <?php include('wpet-currently-unavalible-layout.php') ?>
 
@@ -173,7 +173,7 @@
     
     <section class="wpet_metabox_wrapper" id="button">
 
-        <h2>Button Settings</h2>
+        <h2>Настройки кнопки</h2>
 
         <div class="wpet-grig-section text">
             <p>Текст кнопки</p>

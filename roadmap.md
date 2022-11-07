@@ -8,10 +8,10 @@ Main tasks
 - [x] Vertical menu in PostType settings
 - [x] Grid markup in post type settings
 - [x] Create CSS styles
-- [ ] Create default values for metaboxes, or write an error output function when there is a lack of input data
+- [x] Create default values for metaboxes, or write an error output function when there is a lack of input data
   - [x] Make automatic substitution of default values when there is a lack of data from the admin panel
-  - [ ] **MVP** Fix the die stub in the shortcode output (gl_datetime)
-  - [ ] Write automatic generation of the end date, if there is no corresponding value in metabox
+  - [x] **MVP** Fix the die stub in the shortcode output (gl_datetime)
+  - [x] Write automatic generation of the end date, if there is no corresponding value in metabox
 - [x] Shortcode generation
 - [ ] Clean the code from comments and output debugging information
 - [ ] Write documentation for the plugin
