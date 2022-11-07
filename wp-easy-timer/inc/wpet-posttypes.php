@@ -80,15 +80,6 @@ if(!class_exists('WPETCustomPostType')) {
                 return $post_id;
             }
 
-            // Global Settings BlockWidth
-            /*
-            if(is_null($_POST['wpet_gl_settings_blockwidth'])) {
-                delete_post_meta($post_id, 'wpet_gl_settings_blockwidth');
-            } else {
-                update_post_meta($post_id, 'wpet_gl_settings_blockwidth', sanitize_text_field( $_POST['wpet_gl_settings_blockwidth'] ));
-            }
-            */
-
             // Global Settings Options
 
             if(isset( $_POST['wpet_gl_settings_options'] ) ) {
@@ -104,27 +95,7 @@ if(!class_exists('WPETCustomPostType')) {
                 delete_post_meta( $post->ID, 'wpet_gl_settings_options' );
             }
 
-            // Global Settings Order
-            /*
-            if ( isset( $_POST['wpet_sortable_list_order'] ) ) {
-                $list_order = json_decode( stripcslashes($_POST['wpet_sortable_list_order']), true );
-                $old_meta_data = get_post_meta( $post->ID, '_wpet_gl_settings_list_order', true );
-
-                update_post_meta($post_id, '_wpet_gl_settings_list_order', $list_order);
-
-                // if ( !empty($old_meta_data) ) {
-                //     update_post_meta($post_id, '_wpet_gl_settings_list_order', $list_order);
-                // } else {
-                //     add_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order, true );
-                // }
-            } else {
-                $list_order = json_decode( stripcslashes($_POST['wpet_sortable_list_order']), true );
-                add_post_meta( $post_id, '_wpet_gl_settings_list_order', $list_order, true );
-            }
-            */
-
             // Global Settings DateTime
-
 
             if( isset( $_POST['wpet_gl_settings_datetime'] ) ) {
                 if ( empty( $_POST['wpet_gl_settings_datetime'] ) ) {
@@ -144,7 +115,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_heading_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_heading_settings_text', $_POST['wpet_heading_settings_text'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_heading_settings_text', $_POST['wpet_heading_settings_text'], true );
+                delete_post_meta( $post_id, 'wpet_heading_settings_text' );
             }
 
             // Heading Settings Font Size
@@ -152,7 +123,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_heading_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_heading_settings_fontsize', $_POST['wpet_heading_settings_fontsize'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_heading_settings_fontsize', $_POST['wpet_heading_settings_fontsize'], true );
+                delete_post_meta( $post_id, 'wpet_heading_settings_fontsize' );
             }
 
             // Timer Settings Font Size
@@ -160,7 +131,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_tm_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_tm_settings_fontsize', $_POST['wpet_tm_settings_fontsize'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_tm_settings_fontsize', $_POST['wpet_tm_settings_fontsize'], true );
+                delete_post_meta( $post_id, 'wpet_tm_settings_fontsize' );
             }
 
             // Paragraph Settings Text
@@ -168,7 +139,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_pgh_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_pgh_settings_text', $_POST['wpet_pgh_settings_text'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_pgh_settings_text', $_POST['wpet_pgh_settings_text'], true );
+                delete_post_meta( $post_id, 'wpet_pgh_settings_text' );
             }
 
             // Paragraph Settings Font Size
@@ -176,7 +147,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_pgh_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_pgh_settings_fontsize', $_POST['wpet_pgh_settings_fontsize'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_pgh_settings_fontsize', $_POST['wpet_pgh_settings_fontsize'], true );
+                delete_post_meta( $post_id, 'wpet_pgh_settings_fontsize' );
             }
 
             // Button Settings Text
@@ -184,7 +155,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_text', $_POST['wpet_btn_settings_text'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_btn_settings_text', $_POST['wpet_btn_settings_text'], true );
+                delete_post_meta( $post_id, 'wpet_btn_settings_text' );
             }
 
             // Button Settings Font Size
@@ -192,7 +163,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_btn_settings_fontsize', $_POST['wpet_btn_settings_fontsize'], true );
+                delete_post_meta( $post_id, 'wpet_btn_settings_fontsize' );
             }
 
             // Button Settings Link
@@ -200,7 +171,7 @@ if(!class_exists('WPETCustomPostType')) {
             if( isset( $_POST['wpet_btn_settings_link'] ) ) {
                 update_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'] );
             } else {
-                //add_post_meta( $post_id, 'wpet_btn_settings_link', $_POST['wpet_btn_settings_link'], true );
+                delete_post_meta( $post_id, 'wpet_btn_settings_link' );
             }
 
             return $post_id;

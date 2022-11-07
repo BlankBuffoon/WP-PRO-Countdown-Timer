@@ -3,7 +3,7 @@
 Plugin Name: WP Easy Timer
 Description: Plugin for quick and easy creation of timers for your wordpress site
 Plugin URI: https://github.com/BlankBuffoon/WP-Easy-Timer
-Version: 0.0.1
+Version: 1.0.0
 Author: Aleksandr Terepin
 Author URI: https://terepin.ru
 Licence: GPLv2 or later

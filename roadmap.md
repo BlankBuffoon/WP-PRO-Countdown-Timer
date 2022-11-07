@@ -13,7 +13,7 @@ Main tasks
   - [x] **MVP** Fix the die stub in the shortcode output (gl_datetime)
   - [x] Write automatic generation of the end date, if there is no corresponding value in metabox
 - [x] Shortcode generation
-- [ ] Clean the code from comments and output debugging information
+- [x] Clean the code from comments and output debugging information
 - [ ] Write documentation for the plugin
 
 **MVP** Timer Functionallity
@@ -35,10 +35,10 @@ Main tasks
 - [x] Support for multiple timers on one page
 
 Build testing
-- [ ] Installation
-- [ ] Deinstalation
-- [ ] Metaboxes functionallity
-- [ ] Metaboxes default values
+- [x] Installation
+- [x] Deinstalation
+- [x] Metaboxes functionallity
+- [x] Metaboxes default values
 - [x] Shortcodes generation
 
 Other
@@ -47,7 +47,7 @@ Other
 - [ ] Think over the hierarchy of files for the layout of the post type settings page
 
 Constantly
-- [ ] Refactor
+- [x] Refactor
 
 For next versions
 - [ ] Make language support
