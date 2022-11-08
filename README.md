@@ -31,6 +31,11 @@ All shortcodes have the format as: `[wppct-timer id=""]`. Shortcodes without an 
 
 If you have any problems (bugs, flaws, etc.), then create an issue in this repository. I will try to process them as soon as possible.
 
+## License
+
+GPLv2 or later
+[View the full text of the license](LICENSE.md)
+
 ## Roadmap
 
 - Language Packs Support
@@ -44,9 +49,8 @@ If you have any problems (bugs, flaws, etc.), then create an issue in this repos
 - More timers! (Analog, Digital, Circle, etc.)
 - And more...
 
-[Check current roadmap here](roadmap.md)
+[Check current roadmap here](ROADMAP.md)
 
 ## Changelog
 #### - 1.0 Release -
-
 Release

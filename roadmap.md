@@ -1,4 +1,4 @@
-# Current Roadmap to v2.0
+# Roadmap to v2.0
   
 Main tasks
 - [ ] Make language support
@@ -10,7 +10,7 @@ Other
 Constantly
 - [ ] Refactor
 
-# Current Roadmap to v1.0
+# Roadmap to v1.0
 
 Timepicker
 - [x] Fix Timepicker Error Log
