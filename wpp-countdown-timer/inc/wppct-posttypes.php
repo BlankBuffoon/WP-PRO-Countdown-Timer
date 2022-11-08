@@ -21,8 +21,8 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             add_action( 'wp_enqueue_scripts', 'wppct_enqueue_front' );
 
-            add_action( 'manage_timer_posts_columns', [$this, 'wppct_posttype_columns'] );
-            add_action( 'manage_timer_posts_custom_column', [$this, 'wppct_custom_posttype_columns'], 10, 2 );
+            add_action( 'manage_wppct_timer_posts_columns', [$this, 'wppct_posttype_columns'] );
+            add_action( 'manage_wppct_timer_posts_custom_column', [$this, 'wppct_custom_posttype_columns'], 10, 2 );
         }
 
         public function wppct_posttype_columns( $columns ) {
@@ -51,7 +51,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
                 'wppct_settings',
                 'Настройки таймера',
                 [$this, 'wppct_metabox_property_html'],
-                'timer',
+                'wppct_timer',
                 'normal',
                 'default'
             );
@@ -178,11 +178,11 @@ if(!class_exists('WPPCT_CustomPostType')) {
         }
     
         public function wppct_custom_post_type() {
-            register_post_type( 'timer',
+            register_post_type( 'wppct_timer',
             array(
                 'public' => true,
                 'has_archive' => true,
-                'rewrite' => array( 'slug' => 'timer' ),
+                'rewrite' => array( 'slug' => 'wppct_timer' ),
                 'label' => 'Таймеры',
                 'supports' => array('title'),
                 'menu_icon'=> 'dashicons-clock',

@@ -21,12 +21,6 @@
     $button_text = get_post_meta( $post->ID, 'wppct_btn_settings_text', true );
     $button_fontsize = get_post_meta( $post->ID, 'wppct_btn_settings_fontsize', true );
     $button_link = get_post_meta( $post->ID, 'wppct_btn_settings_link', true );
-
-    $show_meta = get_post_meta( $post->ID, '' );
-
-    echo "<pre>";
-    print_r($show_meta);
-    echo "</pre>";
 ?>
 <div class="wppct_metabox" id="wppct_metabox_tabs">
     <ul>
