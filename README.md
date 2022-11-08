@@ -11,6 +11,10 @@
 - Time zone support from WordPress settings
 - Input data validation (kernel crash protection)
 
+## Installation
+
+Just install the plugin using the archive inside the admin panel or drag the plugin folder to the `wp-content/plugins` directory
+
 ## How to use? (5 simple steps)
 
 1. In the WordPress settings, find the "Timers" tab and create your own timer. 
@@ -26,7 +30,6 @@ All shortcodes have the format as: `[wppct-timer id=""]`. Shortcodes without an 
 ## Support
 
 If you have any problems (bugs, flaws, etc.), then create an issue in this repository. I will try to process them as soon as possible.
-
 
 ## Roadmap
 
