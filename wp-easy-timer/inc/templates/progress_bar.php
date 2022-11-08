@@ -1,3 +1,3 @@
-<div class="wpet-timer-paragraph" style="display: none;">
+<div class="wppct-timer-paragraph" style="display: none;">
 
 </div>

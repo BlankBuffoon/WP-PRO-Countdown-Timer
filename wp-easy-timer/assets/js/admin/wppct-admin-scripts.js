@@ -6,10 +6,10 @@ jQuery(function() {
         changeMonth	: true,
         changeYear	: true,
         onSelect: function(date) {
-            jQuery( "#wpet_gl_settings_datetime" ).val(date);
+            jQuery( "#wppct_gl_settings_datetime" ).val(date);
         }
     });
 
-    jQuery("#wpet_metabox_tabs").tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
-    jQuery("#wpet_metabox_tabs li").removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+    jQuery("#wppct_metabox_tabs").tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    jQuery("#wppct_metabox_tabs li").removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 });

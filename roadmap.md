@@ -1,3 +1,15 @@
+# Current Roadmap to v2.0
+  
+Main tasks
+- [ ] Make language support
+
+Build testing
+
+Other
+
+Constantly
+- [ ] Refactor
+
 # Current Roadmap to v1.0
 
 Timepicker
@@ -14,7 +26,7 @@ Main tasks
   - [x] Write automatic generation of the end date, if there is no corresponding value in metabox
 - [x] Shortcode generation
 - [x] Clean the code from comments and output debugging information
-- [ ] Write documentation for the plugin
+- [x] Write documentation for the plugin
 
 **MVP** Timer Functionallity
 - [x] Create Timer layout
@@ -43,8 +55,8 @@ Build testing
 
 Other
 - [x] Create metaboxes for custom posttype
-- [ ] Create class (php, css) hierarchy
-- [ ] Think over the hierarchy of files for the layout of the post type settings page
+- [x] Create class (php, css) hierarchy
+- [x] Think over the hierarchy of files for the layout of the post type settings page
 
 Constantly
 - [x] Refactor

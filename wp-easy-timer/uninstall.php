@@ -1,7 +1,7 @@
 <?php
 
-$wpet_posts = get_posts( array('post_type'=>'timer','numberposts'=>-1) );
+$wppct_posts = get_posts( array('post_type'=>'timer','numberposts'=>-1) );
 
-foreach( $wpet_posts as $wpet_post ) {
-    wp_delete_post($wpet_post->ID, true);
+foreach( $wppct_posts as $wppct_post ) {
+    wp_delete_post($wppct_post->ID, true);
 }

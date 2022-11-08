@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: WP Easy Timer
+Plugin Name: WP PRO Countdown Timer
 Description: Plugin for quick and easy creation of timers for your wordpress site
 Plugin URI: https://github.com/BlankBuffoon/WP-Easy-Timer
 Version: 1.0.0
 Author: Aleksandr Terepin
 Author URI: https://terepin.ru
 Licence: GPLv2 or later
-Text Domain: wp-easy-timer
+Text Domain: wpp-countdown-timer
 */
 
 if ( !defined('ABSPATH') ) {
@@ -15,25 +15,25 @@ if ( !defined('ABSPATH') ) {
 }
 
 // Plugin Dir Path
-if (!defined('WPEASYTIMER_PATH')) {
-    define('WPEASYTIMER_PATH', plugin_dir_path(__FILE__));
+if (!defined('WPPCT_PATH')) {
+    define('WPPCT_PATH', plugin_dir_path(__FILE__));
 }
 
 // Plugin Prefix
-if (!defined('WPEASYTIMER_PREFIX')) {
-    define('WPEASYTIMER_PREFIX', 'wpet_');
+if (!defined('WPPCT_PREFIX')) {
+    define('WPPCT_PREFIX', 'wppct_');
 }
 
 
-if(!class_exists('WPETCustomPostType')) {
-    require WPEASYTIMER_PATH . 'inc/wpet-posttypes.php';
+if(!class_exists('WPPCT_CustomPostType')) {
+    require WPPCT_PATH . 'inc/wppct-posttypes.php';
 }
 
-if(!class_exists('WPETShortcodes')) {
-    require WPEASYTIMER_PATH . 'inc/wpet-shortcodes.php';
+if(!class_exists('WPPCT_Shortcodes')) {
+    require WPPCT_PATH . 'inc/wppct-shortcodes.php';
 }
 
-class wpeasytimer {
+class WPP_Countdown_Timer {
 
     static function activation() {
 
@@ -46,9 +46,9 @@ class wpeasytimer {
     }
 }
 
-if ( class_exists('wpeasytimer') ) {
-    $wpeasytimer = new wpeasytimer();
+if ( class_exists('WPP_Countdown_Timer') ) {
+    $wppct = new WPP_Countdown_Timer();
 }
 
-register_activation_hook(__FILE__, array($wpeasytimer,'activation') );
-register_deactivation_hook(__FILE__, array($wpeasytimer,'deactivation') );
+register_activation_hook(__FILE__, array($wppct,'activation') );
+register_deactivation_hook(__FILE__, array($wppct,'deactivation') );

@@ -1,18 +1,18 @@
-.wpet_metabox {
+.wppct_metabox {
     display: flex;
 }
 
-.wpet_metabox * {
+.wppct_metabox * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.wpet-metabox-menu ul {
+.wppct-metabox-menu ul {
     height: 100%;
 }
 
-.wpet-metabox-menu ul li {
+.wppct-metabox-menu ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,51 +21,51 @@
     border-bottom: 1px solid rgb(93, 93, 93);
 }
 
-.wpet_metabox_wrapper h2 {
+.wppct_metabox_wrapper h2 {
     padding: 0 !important;
     margin-bottom: 8px !important;
 }
 
-.wpet_metabox_wrapper * {
+.wppct_metabox_wrapper * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.wpet-grig-section {
+.wppct-grig-section {
     margin-bottom: 18px;
     display: grid;
     grid-template-columns: 3fr 3.5fr 2fr;
     gap: 10px;
 }
 
-.wpet-grig-section.order ul {
+.wppct-grig-section.order ul {
     padding: 10px;
     border: 1px solid #bababa;
 }
 
-.wpet-grig-section.order ul li {
+.wppct-grig-section.order ul li {
     padding: 4px 8px;
 }
 
-.wpet-grig-section.order ul li:not(:last-child) {
+.wppct-grig-section.order ul li:not(:last-child) {
     margin-bottom: 4px;
 }
 
-.wpet-unavalible-information {
+.wppct-unavalible-information {
     color: #6a0c0c;
 }
 
-.wpet-unavalible * {
+.wppct-unavalible * {
     display: none;
     color: #909090;
 }
 
-.wpet-grig-section.text {
+.wppct-grig-section.text {
     align-items: center;
 }
 
-.wpet-grig-section.fontsize {
+.wppct-grig-section.fontsize {
     align-items: center;
 }
 
@@ -76,7 +76,7 @@
 .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-right: .1em; border-right-width: 1px; }
 .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
-.wpet-vertical-menu-link { width: 100% }
+.wppct-vertical-menu-link { width: 100% }
 
 .ui-tabs-vertical .ui-widget-header { background: none; border: none; }
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { margin-bottom: .2em !important; }

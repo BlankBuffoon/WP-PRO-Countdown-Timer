@@ -79,13 +79,13 @@ function convertNumToTime(number) {
 
 
 // Multitimer support
-const timers = document.querySelectorAll(".wpet-timer-timer");
+const timers = document.querySelectorAll(".wppct-timer-timer");
 
 timers.forEach(timer => {
     // Timer data
-    let timer_id = '.timer-' + timer.querySelector('input[name="wpet-timer_id"]').value;
-    let timer_datetime = timer.querySelector('input[name="wpet-timer_datetime"]').value;
-    let timer_timezone = timer.querySelector('input[name="wpet-timer_timezone"]').value;
+    let timer_id = '.timer-' + timer.querySelector('input[name="wppct-timer_id"]').value;
+    let timer_datetime = timer.querySelector('input[name="wppct-timer_datetime"]').value;
+    let timer_timezone = timer.querySelector('input[name="wppct-timer_timezone"]').value;
 
     // Timer datetime parse
     let year = timer_datetime.slice(6, 10);

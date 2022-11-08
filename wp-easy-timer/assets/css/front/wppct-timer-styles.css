@@ -1,25 +1,25 @@
 /* Wrapper */
 
-.wpet-timer-wrapper {
+.wppct-timer-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.wpet-timer-wrapper * {
+.wppct-timer-wrapper * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.wpet-timer-wrapper > div:not(.wpet-timer-button) {
+.wppct-timer-wrapper > div:not(.wppct-timer-button) {
   margin: 6px 0;
 }
 
 /* Heading */
 
-.wpet-timer-heading > h2 {
+.wppct-timer-heading > h2 {
   text-align: center;
 }
 
@@ -54,7 +54,7 @@
 
 /* Paragraph */
 
-.wpet-timer-paragraph > p {
+.wppct-timer-paragraph > p {
   text-align: center;
 }
 
@@ -62,11 +62,11 @@
 
 /* Button */
 
-.wpet-timer-button {
+.wppct-timer-button {
   margin: 16px 0;
 }
 
-.wpet-timer-button > a {
+.wppct-timer-button > a {
   text-decoration: none;
   cursor: pointer;
   padding: 2px 22px;
