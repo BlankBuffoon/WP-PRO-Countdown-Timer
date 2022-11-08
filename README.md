@@ -34,7 +34,7 @@ If you have any problems (bugs, flaws, etc.), then create an issue in this repos
 ## License
 
 GPLv2 or later
-[View the full text of the license](LICENSE.md)
+([View the full text of the license](LICENSE.md))
 
 ## Roadmap
 
