@@ -47,6 +47,6 @@ If you have any problems (bugs, flaws, etc.), then create an issue in this repos
 [Check current roadmap here](roadmap.md)
 
 ## Changelog
-#### 1.0 Release
+### == 1.0 Release ==
 
 Release
