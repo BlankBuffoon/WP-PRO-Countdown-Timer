@@ -1,13 +1,14 @@
 <?php
-/*
-Plugin Name: WP PRO Countdown Timer
-Description: Plugin for quick and easy creation of timers for your wordpress site
-Plugin URI: https://github.com/BlankBuffoon/WP-Easy-Timer
-Version: 1.0.0
-Author: Aleksandr Terepin
-Author URI: https://terepin.ru
-Licence: GPLv2 or later
-Text Domain: wpp-countdown-timer
+/**
+ * Plugin Name: WP PRO Countdown Timer
+ * Description: Plugin for quick and easy creation of timers for your wordpress site
+ * Plugin URI: https://github.com/BlankBuffoon/WP-Easy-Timer
+ * Version: 1.0.0
+ * Author: Про-Технологии
+ * Author URI: https://terepin.ru
+ * Licence: GPLv2 or later
+ * Text Domain: wpp-countdown-timer
+ * License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 */
 
 if ( !defined('ABSPATH') ) {
