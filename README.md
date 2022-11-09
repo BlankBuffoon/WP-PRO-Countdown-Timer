@@ -52,5 +52,9 @@ GPLv2 or later
 [Check current roadmap here](ROADMAP.md)
 
 ## Changelog
+
+#### - 1.0.1 Bugfix -
+Fixed a critical bug related to faulty validation of the edited post type due to which metaboxes values were not saved
+
 #### - 1.0 Release -
 Release
