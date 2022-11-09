@@ -71,7 +71,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
                 return $post_id;
             }
 
-            if ( $post->post_type != 'timer' ) {
+            if ( $post->post_type != 'wppct_timer' ) {
                 return $post_id;
             }
 
@@ -112,7 +112,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Heading Settings Text
 
-            if( isset( $_POST['wppct_heading_settings_text'] ) ) {
+            if( !empty( $_POST['wppct_heading_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wppct_heading_settings_text', $_POST['wppct_heading_settings_text'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_heading_settings_text' );
@@ -120,7 +120,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Heading Settings Font Size
 
-            if( isset( $_POST['wppct_heading_settings_fontsize'] ) ) {
+            if( !empty( $_POST['wppct_heading_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wppct_heading_settings_fontsize', $_POST['wppct_heading_settings_fontsize'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_heading_settings_fontsize' );
@@ -128,7 +128,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Timer Settings Font Size
 
-            if( isset( $_POST['wppct_tm_settings_fontsize'] ) ) {
+            if( !empty( $_POST['wppct_tm_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wppct_tm_settings_fontsize', $_POST['wppct_tm_settings_fontsize'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_tm_settings_fontsize' );
@@ -136,7 +136,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Paragraph Settings Text
 
-            if( isset( $_POST['wppct_pgh_settings_text'] ) ) {
+            if( !empty( $_POST['wppct_pgh_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wppct_pgh_settings_text', $_POST['wppct_pgh_settings_text'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_pgh_settings_text' );
@@ -144,7 +144,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Paragraph Settings Font Size
 
-            if( isset( $_POST['wppct_pgh_settings_fontsize'] ) ) {
+            if( !empty( $_POST['wppct_pgh_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wppct_pgh_settings_fontsize', $_POST['wppct_pgh_settings_fontsize'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_pgh_settings_fontsize' );
@@ -152,7 +152,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Button Settings Text
 
-            if( isset( $_POST['wppct_btn_settings_text'] ) ) {
+            if( !empty( $_POST['wppct_btn_settings_text'] ) ) {
                 update_post_meta( $post_id, 'wppct_btn_settings_text', $_POST['wppct_btn_settings_text'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_btn_settings_text' );
@@ -160,7 +160,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Button Settings Font Size
 
-            if( isset( $_POST['wppct_btn_settings_fontsize'] ) ) {
+            if( !empty( $_POST['wppct_btn_settings_fontsize'] ) ) {
                 update_post_meta( $post_id, 'wppct_btn_settings_fontsize', $_POST['wppct_btn_settings_fontsize'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_btn_settings_fontsize' );
@@ -168,7 +168,7 @@ if(!class_exists('WPPCT_CustomPostType')) {
 
             // Button Settings Link
 
-            if( isset( $_POST['wppct_btn_settings_link'] ) ) {
+            if( !empty( $_POST['wppct_btn_settings_link'] ) ) {
                 update_post_meta( $post_id, 'wppct_btn_settings_link', $_POST['wppct_btn_settings_link'] );
             } else {
                 delete_post_meta( $post_id, 'wppct_btn_settings_link' );
