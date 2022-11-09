@@ -4,17 +4,17 @@ if ( !defined('ABSPATH') ) {
     die;
 }
 
-function wpet_enqueue_admin() {
-    wp_enqueue_script( 'wpeasytimer_script', plugins_url('/../assets/js/admin/wpet-admin-scripts.js', __FILE__), array('jquery'), '1.0', true );
-    wp_enqueue_style( 'wpeasytimer_styles', plugins_url('/../assets/css/admin/wpet-admin-styles.css', __FILE__) );
+function wppct_enqueue_admin() {
+    wp_enqueue_script( 'wppct_script', plugins_url('/../assets/js/admin/wppct-admin-scripts.js', __FILE__), array('jquery'), '1.0', true );
+    wp_enqueue_style( 'wppct_styles', plugins_url('/../assets/css/admin/wppct-admin-styles.css', __FILE__) );
 }
 
-function wpet_enqueue_front() {
-    wp_register_script( 'wpet_timer_script', plugins_url('/../assets/js/front/wpet-timer-scripts.js', __FILE__), array('jquery'), '1.0', true );
-    wp_enqueue_style( 'wpet_timer_style', plugins_url('/../assets/css/front/wpet-timer-styles.css', __FILE__) );
+function wppct_enqueue_front() {
+    wp_register_script( 'wppct_script', plugins_url('/../assets/js/front/wppct-timer-scripts.js', __FILE__), array('jquery'), '1.0', true );
+    wp_enqueue_style( 'wppct_style', plugins_url('/../assets/css/front/wppct-timer-styles.css', __FILE__) );
 }
 
-function wpet_enqueue_jqueryUI() {
+function wppct_enqueue_jqueryUI() {
     wp_enqueue_script( 'jquery-ui-datepicker' );
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-slider' );
