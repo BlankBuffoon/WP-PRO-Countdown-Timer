@@ -58,3 +58,6 @@ Fixed a critical bug related to faulty validation of the edited post type due to
 
 #### - 1.0 Release -
 Release
+
+#### - 1.1 Release -
+Release 1.11111
